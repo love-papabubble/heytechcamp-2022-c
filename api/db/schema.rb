@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_09_09_082453) do
     t.bigint "order_id", null: false
     t.bigint "customer_id", null: false
     t.bigint "item_id", null: false
+    t.integer "amount", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["customer_id"], name: "index_order_details_on_customer_id"

@@ -4,6 +4,7 @@ class CreateOrderDetails < ActiveRecord::Migration[6.0]
       t.references :order, null: false, foreign_key: true
       t.references :customer, null: false, foreign_key: true
       t.references :item, null: false, foreign_key: true
+      t.integer :amount, null: false
 
       t.timestamps
     end
