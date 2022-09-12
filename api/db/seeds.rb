@@ -34,4 +34,5 @@ OrderDetail.create!(
   order_id: order.id,
   customer_id: customer.id,
   item_id: item.id,
+  amount: 2,
 )
