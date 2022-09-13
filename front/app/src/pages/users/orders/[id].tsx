@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Customer } from '@/components/Customers/index';
 import { CustomerDisplay } from '@/components/OrderDetails/CustomerDisplay';
+import { DeliverdButton } from '@/components/OrderDetails/DeliverdButton';
 import { ItemList } from '@/components/OrderDetails/ItemList';
 import { OrderDisplayForUser } from '@/components/OrderDetails/OrderDisplayForUser';
 
@@ -36,8 +37,24 @@ const OrderDetailForUserPage: NextPage = () => {
     }
   }
 
+  const handleDeliverd = async (event: React.MouseEvent<HTMLInputElement>) => {
+    try {
+      const res = await axios.put(`http://localhost:3000/users/orders/${id}`);
+      getOrderDetail();
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div>
+      {!order?.is_delivered && (
+        <DeliverdButton
+          handleDeliverd={handleDeliverd}
+        />
+      )}
+
       <OrderDisplayForUser id={id} order={order} />
       <ItemList orderDetails={orderDetails} sumPrice={order?.sum_price} />
       <CustomerDisplay customer={customer} />

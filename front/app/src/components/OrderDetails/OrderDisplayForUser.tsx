@@ -5,7 +5,6 @@ import AlertTitle from '@mui/material/AlertTitle';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-
 import { Order } from '@/components/Orders/index';
 import { formatDateTime } from '@/utils/datetime';
 
@@ -27,26 +26,26 @@ export const OrderDisplayForUser: React.FC<OrderDisplayForUserProps> = ({
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-        <Typography m={2} sx={{ fontWeight: 'bold' }}>
-          予約番号:{id}
-        </Typography>
-
-        <Stack mb={4} mx={2}>
+        <Stack mt={3} mx={2}>
           {order?.is_delivered ? (
             <Alert severity='success' color='info'>
-              <strong>この予約はすでに受け取り済みです。</strong>
+              <strong>この予約はすでに受け渡し済みです。</strong>
             </Alert>
           ) : (
             <Alert severity='info'>
               <AlertTitle>
-                <strong>まだ受け取りが完了していません。</strong>
+                <strong>まだ受け渡しが完了していません。</strong>
               </AlertTitle>
-              商品を受け取ったら下記のボタンを押してください。
+              商品を受け取ったら受け取り確認ボタンを押してください。
             </Alert>
           )}
         </Stack>
 
-        <Typography m={2} sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+        <Typography mt={2} sx={{ fontWeight: 'bold' }}>
+          予約番号:{id}
+        </Typography>
+
+        <Typography mb={1} sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>
           <small>受け取り日時 : </small>
           {'   '}
           {order?.delivery_time && formatDateTime(order?.delivery_time)}
