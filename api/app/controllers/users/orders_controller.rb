@@ -18,4 +18,14 @@ class Users::OrdersController < ApplicationController
 
     render json: { id: order.id, is_delivered: order.is_delivered, sum_price: sum_price, delivery_time: order.delivery_time, customer: customer, order_details: items, status: :ok }
   end
+
+  # 受け取り済みにする
+  def update
+    order = Order.find(params[:id])
+    if order.update!(is_delivered: true)
+      render status: :no_content
+    else
+      render json: { message: '受け取り情報の更新に失敗しました。' }, status: :bad_request
+    end
+  end
 end
