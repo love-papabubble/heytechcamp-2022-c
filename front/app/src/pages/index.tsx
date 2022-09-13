@@ -1,11 +1,29 @@
-import type { NextPage } from 'next';
+import type {NextPage} from 'next';
+import React, {useEffect, useState} from "react";
+import Navigation from "../components/Navigation";
+import OrderView from "../components/Orders/OrderView";
+import {Order} from "@/components/Orders";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      aaa
-    </div>
-  );
+    const [orders, setOrders] = useState<Order[]>([]);
+    useEffect(() => {
+        fetch('http://localhost:3000/customers/orders', {method: 'GET'})
+            .then(res => res.json())
+            .then(datum => {
+                //sort so that the latest order is on top
+                datum.sort((a: Order, b: Order) => {
+                    return new Date(b.delivery_time).getTime() - new Date(a.delivery_time).getTime();
+                });
+                setOrders(datum);
+            });
+    })
+
+    return (
+        <>
+            <Navigation/>
+            <OrderView orders={orders}/>
+        </>
+    );
 };
 
 export default Home;
