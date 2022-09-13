@@ -7,10 +7,10 @@ import React, { useState, useEffect } from 'react';
 import { ItemList } from '@/components/OrderDetails/ItemList';
 import { OrderDisplay } from '@/components/OrderDetails/OrderDisplay';
 
-import { Order } from '@/components/Orders/index';
 import { OrderDetail } from '@/components/OrderDetails/index';
+import { Order } from '@/components/Orders/index';
 
-const OrderDetail: NextPage = () => {
+const OrderDetailPage: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const QRCodeURL = `http://localhost:8000/users/order/${id}`;
@@ -43,4 +43,4 @@ const OrderDetail: NextPage = () => {
   );
 };
 
-export default OrderDetail;
+export default OrderDetailPage;
