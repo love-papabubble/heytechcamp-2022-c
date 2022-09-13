@@ -3,4 +3,5 @@ export interface Order {
     is_delivered: boolean;
     delivery_time: string;
     customer_id: number;
+    sum_price?: number;
 }
