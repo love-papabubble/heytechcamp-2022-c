@@ -10,6 +10,7 @@
     "lint:fix": "yarn lint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
+  "type": "module",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/server": "^11.4.0",
@@ -17,6 +18,8 @@
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.5.1",
     "@mui/x-date-pickers": "^5.0.1",
+    "@zxing/browser": "^0.1.1",
+    "@zxing/library": "^0.19.1",
     "axios": "^0.26.1",
     "dayjs": "^1.11.5",
     "next": "12.1.0",
