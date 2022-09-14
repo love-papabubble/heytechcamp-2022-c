@@ -28,7 +28,7 @@ export const OrderDisplayForUser: React.FC<OrderDisplayForUserProps> = ({
         }}>
         <Stack mt={3} mx={2}>
           {order?.is_delivered ? (
-            <Alert severity='success' color='info'>
+            <Alert severity='success' color='success'>
               <strong>この予約はすでに受け渡し済みです。</strong>
             </Alert>
           ) : (
