@@ -8,10 +8,11 @@ export interface Order {
     sum_price?: number;
 }
 export interface OrderInfo {
-    delivery_time: boolean;
-    is_delivered: string;
+    id: number,
+    is_delivered: boolean;
+    delivery_time: string;
     sum_price: number;
     customer: Customer;
-    orderDetails: OrderDetail[];
+    order_details: OrderDetail[];
     children?: React.ReactNode;
 }
