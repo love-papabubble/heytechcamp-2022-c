@@ -38,7 +38,7 @@ export const DeliverdButton: React.FC<DeliverdButtonProps> = ({
           </DialogTitle>
           <DialogActions>
             <Button onClick={handleClose}>キャンセル</Button>
-            <Button onClick={() => handleDeliverd}>OK</Button>
+            <Button onClick={handleDeliverd}>OK</Button>
           </DialogActions>
         </Dialog>
       </div>
