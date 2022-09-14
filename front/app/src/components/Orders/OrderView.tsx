@@ -18,7 +18,7 @@ export default function OrderView(props: OrderViewProps) {
                             <Card sx={{minWidth: 275}} key={index} variant={"outlined"} style={{marginBottom: "5px"}}>
                                 <CardContent>
                                     <Typography sx={{fontSize: 21}} color="text.secondary" gutterBottom>
-                                        受取日時: {formatDateTime(order.delivery_time)}
+                                        受取日時: {order.delivery_time && formatDateTime(order.delivery_time)}
                                     </Typography>
                                     <Typography variant="h5" component="div">
                                     </Typography>
