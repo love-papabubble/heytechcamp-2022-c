@@ -9,7 +9,7 @@ interface ItemListProps {
   orderDetails: OrderDetail[];
   sumPrice: number | undefined;
   children?: React.ReactNode;
-};
+}
 
 export const ItemList: React.FC<ItemListProps> = ({
   orderDetails,
@@ -26,10 +26,10 @@ export const ItemList: React.FC<ItemListProps> = ({
         <Typography sx={{ fontWeight: 'bold' }} m={1}>
           予約した商品
         </Typography>
-        {orderDetails.map((orderDetail) => {
+        {orderDetails.map((orderDetail, index) => {
           let itemPrice = orderDetail.item.price * orderDetail.amount;
           return (
-            <div key={orderDetail.item.id}>
+            <div key={index}>
               <Divider component='li' />
               <Box px={3} my={1}>
                 <Box>
