@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   namespace :customers do
     resources :orders, only: [:index, :create, :show]
   end
+  namespace :users do
+    resources :orders, only: [:index, :show, :update]
+  end
 end
