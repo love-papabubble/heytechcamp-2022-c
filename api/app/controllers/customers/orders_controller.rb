@@ -18,6 +18,7 @@ class Customers::OrdersController < ApplicationController
   end
 
   def create
+    logger.debug(create_order_params[:delivery_time])
     order = Order.new(delivery_time: create_order_params[:delivery_time], customer_id: create_order_params[:customer_id], is_delivered: create_order_params[:is_delivered])
     order.save
     create_order_detail_params.each do |item|
