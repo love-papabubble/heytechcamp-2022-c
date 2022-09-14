@@ -43,9 +43,10 @@ const Home: NextPage = () => {
     return (
         <>
             <Container maxWidth="md" style={{paddingTop: "1em", paddingBottom: "10em"}}>
-                <Button onClick={() => openQRCamera()}>test</Button>
+                <Button onClick={() => openQRCamera()}>QRコードリーダーを開く</Button>
                 {isQRCameraOpen && <QRCodeReader onRead={(r) => {
                     setIsQRCameraOpen(false);
+                    window.location.href = r.getText();
                 }} setOpen={setIsQRCameraOpen}/>}
             </Container>
             <OrderList ordersInfo={orders}/>
