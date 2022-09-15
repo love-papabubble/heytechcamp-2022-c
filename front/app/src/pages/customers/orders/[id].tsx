@@ -14,7 +14,7 @@ import { Order } from '@/components/Orders/index';
 const OrderDetailPage: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const QRCodeURL = `http://localhost:8000/users/order/${id}`;
+  const QRCodeURL = `http://localhost:8000/users/orders/${id}`;
   const [order, setOrder] = useState<Order>();
   const [orderDetails, setOrderDetails] = useState<OrderDetail[]>([]);
 
