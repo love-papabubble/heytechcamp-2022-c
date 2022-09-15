@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, {useEffect, useState} from 'react';
 import {OrderInfo} from '@/components/Orders';
 import {OrderList} from '@/components/Orders/users/OrderList';
-import {useRouter} from "next/router";
 
 const Home: NextPage = () => {
     const [orders, setOrders] = useState<OrderInfo[]>([]);
