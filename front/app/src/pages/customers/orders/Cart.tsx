@@ -5,7 +5,7 @@ import {DatePicker} from '@mui/x-date-pickers/DatePicker';
 import {TimePicker} from '@mui/x-date-pickers/TimePicker';
 import {Dayjs} from "dayjs";
 import {FC, useState} from "react";
-import {Item} from "../items/index";
+import {Item} from "../../../components/Items/index"
 
 export interface CartProps {
     cartDetails: {
