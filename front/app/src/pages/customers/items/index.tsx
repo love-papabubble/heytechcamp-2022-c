@@ -25,13 +25,13 @@ const ItemsView: NextPage = () => {
 
   return (
     <>
+      <Menu />
       <div
         style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'start',
         }}>
-        <Menu />
         <Container>
           {items &&
             items.map((item, index) => {
