@@ -73,7 +73,7 @@ const Cart: FC<CartProps> = (props: CartProps) => {
 
   return (
     <>
-      <Container fixed>
+      <Container fixed style={{ flexBasis: '30%' }}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <Stack spacing={3}>
             <Typography variant='h5' component='div'>
@@ -100,7 +100,7 @@ const Cart: FC<CartProps> = (props: CartProps) => {
                     <Typography variant='h5' component='div' key={index}>
                       {cartDetail.item.title} x {cartDetail.quantity}
                     </Typography>
-                    <Typography variant='h5' component='div' key={index}>
+                    <Typography variant='h5' component='div'>
                       小計:{cartDetail.item.price * cartDetail.quantity}円
                     </Typography>
                   </>
