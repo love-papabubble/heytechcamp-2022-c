@@ -5,6 +5,7 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
+import { CardMedia } from '@mui/material';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { Item } from '../../../components/Items/index';
