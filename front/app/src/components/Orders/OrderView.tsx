@@ -6,6 +6,7 @@ import {
   Container,
   Typography,
 } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 import { Order } from '@/components/Orders/index';
 import { formatDateTime } from '@/utils/datetime';
@@ -45,9 +46,11 @@ export default function OrderView(props: OrderViewProps) {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size='small' href={`/customers/orders/${order.id}`}>
-                    予約詳細へ
-                  </Button>
+                  <Link href={'/customers/orders/' + order.id}>
+                    <a>
+                      <Button size='small'>予約詳細へ</Button>
+                    </a>
+                  </Link>
                 </CardActions>
               </Card>
             );

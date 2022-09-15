@@ -41,7 +41,9 @@ const Home: NextPage = () => {
       <Container
         maxWidth='md'
         style={{ paddingTop: '1em', paddingBottom: '10em' }}>
-        <Link href={'/users/orders/qr-code-reader'}>QRコードを読み取る</Link>
+        <Link href={'/users/orders/qr-code-reader'}>
+          <a>QRコードを読み取る</a>
+        </Link>
       </Container>
     </>
   );

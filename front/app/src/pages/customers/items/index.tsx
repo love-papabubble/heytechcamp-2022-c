@@ -1,7 +1,6 @@
 import {
   Card,
   CardContent,
-  CardMedia,
   Container,
   IconButton,
   Typography,
@@ -31,13 +30,7 @@ const ItemsView: NextPage = () => {
           items.map((item, index) => {
             return (
               <Card
-                sx={{
-                  minWidth: 275,
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  margin: '10px 0',
-                }}
+                sx={{ minWidth: 275 }}
                 key={index}
                 variant={'outlined'}
                 style={{ marginBottom: '5px' }}>
@@ -98,11 +91,6 @@ const ItemsView: NextPage = () => {
                     -
                   </IconButton>
                 </CardContent>
-                <CardMedia
-                  component='img'
-                  sx={{ width: 151 }}
-                  image={item.item_image}
-                />
               </Card>
             );
           })}
