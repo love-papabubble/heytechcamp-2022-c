@@ -79,6 +79,12 @@ const Cart: FC<CartProps> = (props: CartProps) => {
                     }) : <Typography variant="h5" component="div">
                         なし
                     </Typography>}
+                    {/*display total sum*/}
+                    <Typography variant="h5" component="div">
+                        合計:{props.cartDetails.reduce((sum, cartDetail) => {
+                        return sum + cartDetail.item.price * cartDetail.quantity;
+                    }, 0)}円
+                    </Typography>
                     {/*disabled when cart is empty*/}
                     <Button variant="contained" disabled={props.cartDetails.length === 0} onClick={() => {
                         order()
