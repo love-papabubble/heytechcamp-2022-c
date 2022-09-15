@@ -19,8 +19,12 @@ import Link from 'next/link';
 
 export const Menu = () => {
   return (
-    <Paper sx={{ width: 290, maxWidth: '100%', marginTop: '21px' }}>
-      <MenuList>
+    <Paper
+      sx={{
+        maxWidth: '100%',
+        marginBottom: '21px',
+      }}>
+      <MenuList style={{ display: 'flex', justifyContent: 'center' }}>
         <MenuItem>
           <ListItemIcon>
             <RoomService fontSize='small' />
