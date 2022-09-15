@@ -19,8 +19,6 @@ const ItemsView: NextPage = () => {
 
     return (
         <>
-            <Navigation/>
-            <Menu/>
             <Container>
                 {items &&
                     items.map((item, index) => {
