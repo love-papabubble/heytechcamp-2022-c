@@ -26,7 +26,9 @@ export const Menu = () => {
             <RoomService fontSize='small' />
           </ListItemIcon>
           <ListItemText>
-            <Link href={'/customers'}>予約一覧</Link>
+            <Link href={'/customers'}>
+              <a>予約一覧</a>
+            </Link>
           </ListItemText>
         </MenuItem>
         <MenuItem>
@@ -34,7 +36,9 @@ export const Menu = () => {
             <Search fontSize='small' />
           </ListItemIcon>
           <ListItemText>
-            <Link href={'/customers/items'}>商品を探す</Link>
+            <Link href={'/customers/items'}>
+              <a>商品を探す</a>
+            </Link>
           </ListItemText>
         </MenuItem>
       </MenuList>

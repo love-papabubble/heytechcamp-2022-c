@@ -2,7 +2,7 @@ class Users::OrdersController < ApplicationController
   def index
     date = Date.current
     # delivery_timeが今日のorderの取得
-    orders = Order.where("delivery_time >= ? AND delivery_time < ?", date, date + 1)
+    orders = Order.where("delivery_time >= ? AND delivery_time < ?", date, date + 1).order(:delivery_time)
 
     render_orders = []
 
