@@ -73,7 +73,7 @@ const Cart: FC<CartProps> = (props: CartProps) => {
 
   return (
     <>
-      <Container fixed style={{flexBasis:'30%'}}>
+      <Container fixed style={{ flexBasis: '30%' }}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <Stack spacing={3}>
             <Typography variant='h5' component='div'>
