@@ -1,5 +1,6 @@
 import type {NextPage} from 'next';
 import React, {useEffect, useState} from "react";
+import { Menu } from '../../components/Menu';
 import OrderView from "../../components/Orders/OrderView";
 import {Order} from "@/components/Orders";
 
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 
     return (
         <>
+            <Menu />
             <OrderView orders={orders}/>
         </>
     );

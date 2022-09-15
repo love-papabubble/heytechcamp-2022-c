@@ -2,7 +2,6 @@ import {Card, CardContent, Container, IconButton, Typography} from "@mui/materia
 import type {NextPage} from 'next';
 import {useEffect, useState} from "react";
 import {Menu} from "../../../components/Menu";
-import Navigation from "../../../components/Navigation";
 import Cart from "../orders/Cart";
 import {Item} from "./index";
 
@@ -19,6 +18,7 @@ const ItemsView: NextPage = () => {
 
     return (
         <>
+            <Menu/>
             <Container>
                 {items &&
                     items.map((item, index) => {

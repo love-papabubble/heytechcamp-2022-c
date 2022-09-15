@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 
+import { Menu } from '@/components/Menu';
 import { ItemList } from '@/components/OrderDetails/ItemList';
 import { OrderDisplay } from '@/components/OrderDetails/OrderDisplay';
 
@@ -37,6 +38,7 @@ const OrderDetailPage: NextPage = () => {
 
   return (
     <div>
+      <Menu />
       <OrderDisplay id={id} order={order} QRCodeURL={QRCodeURL} />
       <ItemList orderDetails={orderDetails} sumPrice={order?.sum_price} />
     </div>
