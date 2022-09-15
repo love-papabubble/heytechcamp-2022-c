@@ -4,8 +4,9 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { Dayjs } from 'dayjs';
+import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
-import { Item } from '../items/index';
+import { Item } from '../../../components/Items/index';
 
 export interface CartProps {
   cartDetails: {
@@ -17,6 +18,7 @@ export interface CartProps {
 const Cart: FC<CartProps> = (props: CartProps) => {
   const [datePickerValue, setDatePickerValue] = useState<Dayjs | null>(null);
   const [timePickerValue, setTimePickerValue] = useState<Dayjs | null>(null);
+  const router = useRouter();
 
   const order = () => {
     //validate that the date and time are not null
@@ -63,7 +65,10 @@ const Cart: FC<CartProps> = (props: CartProps) => {
         order: { delivery_time: deliveryTime },
         items: items,
       }),
-    }).then(() => alert('注文が完了しました。'));
+    }).then(() => {
+      router.push('/customers');
+      alert('注文が完了しました。');
+    });
   };
 
   return (

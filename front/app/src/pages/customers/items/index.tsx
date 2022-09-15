@@ -1,5 +1,4 @@
 import {
-  Box,
   Card,
   CardContent,
   CardMedia,
@@ -9,9 +8,9 @@ import {
 } from '@mui/material';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
+import { Item } from '../../../components/Items/index';
 import { Menu } from '../../../components/Menu';
 import Cart from '../orders/Cart';
-import { Item } from './index';
 
 const ItemsView: NextPage = () => {
   const [items, setItems] = useState<Item[]>([]);
