@@ -50,9 +50,7 @@ const OrderDetailForUserPage: NextPage = () => {
   return (
     <div>
       {!order?.is_delivered && (
-        <DeliverdButton
-          handleDeliverd={handleDeliverd}
-        />
+        <DeliverdButton handleDeliverd={handleDeliverd} />
       )}
 
       <OrderDisplayForUser id={id} order={order} />
