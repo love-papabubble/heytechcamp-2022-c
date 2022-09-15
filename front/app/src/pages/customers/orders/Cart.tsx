@@ -125,6 +125,9 @@ const Cart: FC<CartProps> = (props: CartProps) => {
               disabled={props.cartDetails.length === 0}
               onClick={() => {
                 order();
+              }}
+              style={{
+                marginBottom: '20px',
               }}>
               予約
             </Button>
