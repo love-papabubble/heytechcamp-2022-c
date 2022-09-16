@@ -16,7 +16,7 @@ class Users::OrdersController < ApplicationController
       order_details.each do |order_detail|
         item = order_detail.item
         amount = order_detail.amount
-        order_item = {item: {id: item.id, title: item.title, description: item.description.truncate(20), price: item.price, item_image: item.item_image}, amount: order_detail.amount}
+        order_item = { item: { id: item.id, title: item.title, description: item.description.truncate(20), price: item.price, item_image: item.item_image }, amount: order_detail.amount }
         items << order_item
 
         sum_price += amount * item.price
@@ -41,7 +41,7 @@ class Users::OrdersController < ApplicationController
     order_details.each do |order_detail|
       item = order_detail.item
       amount = order_detail.amount
-      order_item = {item: {id: item.id, title: item.title, description: item.description.truncate(20), price: item.price, item_image: item.item_image}, amount: order_detail.amount}
+      order_item = { item: { id: item.id, title: item.title, description: item.description.truncate(20), price: item.price, item_image: item.item_image }, amount: order_detail.amount }
       items << order_item
 
       sum_price += amount * item.price
